@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using GalaSoft.MvvmLight.Ioc;
+using IoCDemo.Core;
+using MvvmLightDemo.Forms.iOS.Implementations;
 using UIKit;
 
 namespace MvvmLightDemo.Forms.iOS
@@ -23,6 +26,12 @@ namespace MvvmLightDemo.Forms.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            //set local implementations in IOC
+            SimpleIoc.Default.Register<ISettings, AppleSettings>();
+            SimpleIoc.Default.Register<IPlatform, ApplePlatform>();
+
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

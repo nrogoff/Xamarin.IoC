@@ -11,7 +11,7 @@ namespace MvvmLightDemo.Forms.WinPhone.Implementations
 
 		public string ContainerName {
 			get {
-				return "MvvmLight";
+                return "MvvmLight SimpleIoc";
 			}
 		}
 	}

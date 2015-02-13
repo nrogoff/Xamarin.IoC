@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MvvmLightDemo.Forms.MainPage">
   <StackLayout Orientation="Vertical" Padding="20">
-    <Label Text="Xamarin F"/>
+    <Label Text="Xamarin Forms IoC Test" FontAttributes="Bold" FontSize="Medium" XAlign="Center"/>
     <Label Text="{Binding PlatformName, StringFormat='Platform : {0}'}" />
     <Label Text="{Binding ContainerName, StringFormat='Container : {0}'}" />
     <Label Text="{Binding UserName, StringFormat='UserName : {0}'}" />
